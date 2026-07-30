@@ -55,7 +55,7 @@ class Visitor(object):
         self.name = name
         self.KEY = Visitor.key(oid)
 
-    def destory(self):
+    def destroy(self):
         self.rd.delete(self.KEY) # Seems won't happen for now
 
     def online(self):
@@ -122,7 +122,7 @@ class User(object):
         self.name = name
         self.KEY = User.key(oid)
 
-    def destory(self):
+    def destroy(self):
         self.rd.delete(self.KEY) # Seems won't happen for now
 
     def online(self):
@@ -206,7 +206,7 @@ class Room(object):
         rd.hset(room.KEY, 'channel', channel)
         return room
 
-    def destory(self):
+    def destroy(self):
         ''' unused for now '''
         self.rd.delete(self.KEY)
 
